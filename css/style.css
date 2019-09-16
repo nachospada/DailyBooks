@@ -31,6 +31,12 @@ body {
   line-height: 40px;
 }
 
+input[type=text], input[type=date], input[type=number] {
+    background-color: #333;
+    color: #aaa;
+    border: 1px #666 solid;
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 10px;
@@ -127,12 +133,6 @@ body {
 form {
     color: #fff;
     margin-top: 30px;
-}
-
-input[type=text], input[type=date] {
-    background-color: #333;
-    color: #aaa;
-    border: 1px #666 solid;
 }
 
 #total {
