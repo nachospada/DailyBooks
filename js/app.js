@@ -6,6 +6,8 @@ import { UserService } from "./user-service.js"
 
 // Initialize the app
 document.addEventListener("DOMContentLoaded", () => {
+  setViewportHeightFix();
+  
   // Initialize services
   const dataService = new DataService()
   const uiService = new UIService()
@@ -278,5 +280,12 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(err => console.error('SW registration failed:', err));
   }
   
+  function setViewportHeightFix() {
+    const setVH = () => {
+      document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+    };
+    setVH();
+    window.addEventListener('resize', setVH);
+  }  
 })
 
